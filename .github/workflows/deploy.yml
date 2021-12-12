@@ -23,7 +23,7 @@ jobs:
 
     - name: Build
       run: |
-        pyinstaller --uac-admin --clean --name altv-reconnect --onefile --icon=main.ico main.py 
+        pyinstaller --uac-admin --clean --name altv-reconnect --onefile --icon=main.ico src/altv-reconnect.py 
 
     - name: Release
       uses: softprops/action-gh-release@v1
