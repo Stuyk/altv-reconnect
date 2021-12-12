@@ -7,17 +7,23 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: PyInstaller Windows
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: src
+    - uses: actions/checkout@v1
 
-    - name: Set ENV (Tagged from CLI)
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.10
+
+    - name: Install dependencies
       run: |
-        echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+
+    - name: Build
+      run: |
+        pyinstaller --uac-admin --clean --name altv-reconnect --onefile --icon=main.ico main.py 
 
     - name: Release
       uses: softprops/action-gh-release@v1
