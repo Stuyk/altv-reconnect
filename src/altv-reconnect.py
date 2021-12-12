@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from time import sleep
-from uvicorn.config import LOG_LEVELS
 import uvicorn
 import win32gui
 import win32con
