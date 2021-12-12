@@ -13,7 +13,7 @@ jobs:
     - name: PyInstaller Windows
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: .
+        path: src
 
     - name: Set ENV (Tagged from CLI)
       run: |
@@ -27,4 +27,4 @@ jobs:
         name: Release ${{ env.RELEASE_VERSION }}
         tag_name: ${{ env.RELEASE_VERSION }}
         files: |
-          ./dist/altv-reconnect
+          dist/altv-reconnect.exe

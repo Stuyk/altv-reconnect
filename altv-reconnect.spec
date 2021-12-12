@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['main.py'],
+a = Analysis(['src\\altv-reconnect.py'],
              pathex=[],
              binaries=[],
              datas=[],
