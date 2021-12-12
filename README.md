@@ -1,5 +1,13 @@
 # altv-reconnect
 
+# What?
+
+It invokes a reconnect in the altV Client Dev Console. You get to determine when your local client should reconnect when developing.
+
+This allows for an easy to use developer controlled reconnection script.
+
+![](https://thumbs.gfycat.com/PeriodicGoodnaturedEwe-size_restricted.gif)
+
 # Why?
 
 I'm tired of typing `reconnect` in the alt:V console. This tool is going to do it for me whether it likes it or not.
