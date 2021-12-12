@@ -26,6 +26,7 @@ jobs:
         pip install pyinstaller
         pip install fastapi
         pip install uvicorn[standard]
+        pip install pywin32
 
     - name: Build
       run: |
