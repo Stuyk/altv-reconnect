@@ -17,5 +17,5 @@ This will only allow reconnecting from a local Windows Machine that is also runn
 Requires pyinstaller
 
 ```
-pyinstaller --uac-admin --clean --name altv-reconnect --onefile --icon=main.ico src/altv-reconnect.py 
+pyinstaller --clean --name altv-reconnect --onefile --icon=main.ico src/altv-reconnect.py 
 ```

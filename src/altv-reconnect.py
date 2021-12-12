@@ -61,11 +61,12 @@ def propogate_reconnect():
         print("useExternalConsole: 'true'")
         print("debug: 'true'")
 
+    return found
+
 
 @app.get('/')
 def root():
-    propogate_reconnect()
-    return {"message": "Reconnected"}
+    return {"reconnected": propogate_reconnect()}
 
 
 if __name__ == "__main__":
