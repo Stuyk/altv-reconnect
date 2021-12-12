@@ -12,6 +12,15 @@ Invoke a HTTP `GET` request for `localhost:5599` to invoke a reconnect.
 
 This will only allow reconnecting from a local Windows Machine that is also running an alt:V Server
 
+**Append to your altv.cfg**
+
+These must be added to your client configuration for this to work:
+
+```
+debug: 'true'
+useExternalConsole: 'true'
+```
+
 # Build from Scratch
 
 Requires pyinstaller
